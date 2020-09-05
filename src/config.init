@@ -1,0 +1,7 @@
+# Project config file
+# May not contain spaces, surround paths with apostrophes
+[DEFAULT]
+test_results_root_path='./results/test'
+tr_results_root_path='./results/train'
+models_root_path='./data/models'
+ds_root_path='./data/datasets'

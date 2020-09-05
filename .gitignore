@@ -1,0 +1,13 @@
+*.tar
+*.pth
+venv/
+.idea/
+
+*.err
+*.log
+*.out
+*.eps
+*.png
+*.pyc
+
+__pycache__/
