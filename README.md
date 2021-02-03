@@ -10,7 +10,7 @@ Source code for the [Continual Learning survey paper](https://arxiv.org/abs/1909
 }
 ```
 
-The code contains a generalizing framework for 11 SOTA methods and 4 baselines:
+The code contains a generalizing framework for 11 SOTA methods and 4 baselines in Pytorch:
 - Methods: SI, EWC, MAS, mean/mode-IMM, LWF, EBLL, PackNet, HAT, GEM, iCaRL 
 - Baselines
     - Joint: Learn from all task data at once with a single head (multi-task learning baseline).
