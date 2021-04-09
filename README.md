@@ -1,22 +1,29 @@
 # A continual learning survey: Defying forgetting in classification tasks
-Source code for the [Continual Learning survey paper](https://arxiv.org/abs/1909.08383):
 
-```
-@article{de2019continual,
-  title={A continual learning survey: Defying forgetting in classification tasks},
-  author={De Lange, Matthias and Aljundi, Rahaf and Masana, Marc and Parisot, Sarah and Jia, Xu and Leonardis, Ale{\v{s}} and Slabaugh, Gregory and Tuytelaars, Tinne},
-  journal={arXiv preprint arXiv:1909.08383},
-  year={2019}
-}
-```
+This is the original source code for the Continual Learning survey paper _"A continual learning survey: Defying forgetting in classification tasks"_ published at TPAMI [[TPAMI paper]](https://ieeexplore.ieee.org/abstract/document/9349197) [[Open-Access paper]](https://arxiv.org/abs/1909.08383).
 
-The code contains a generalizing framework for 11 SOTA methods and 4 baselines in Pytorch:
-- Methods: SI, EWC, MAS, mean/mode-IMM, LWF, EBLL, PackNet, HAT, GEM, iCaRL 
-- Baselines
-    - Joint: Learn from all task data at once with a single head (multi-task learning baseline).
-    - Finetuning: standard SGD
-    - Finetuning with Full Memory replay: Allocate memory dynamically to incoming tasks.
-    - Finetuning with Partial Memory replay: Divide memory a priori over all tasks.
+This work allows comparing the state-of-the-art in a fair fashion using the **Continual Hyperparameter Framework**, which sets the hyperparameters dynamically based on the stability-plasticity dilemma.
+This addresses the longstanding problem in literature to set hyperparameters for different methods in a fair fashion, using ONLY the current task data (hence without using iid validation data, which is not available in continual learning).
+
+The code contains a generalizing framework for 11 SOTA methods and 4 baselines in Pytorch. </br>
+Implemented task-incremental methods are
+<div align="center">
+<p align="center"><b>
+  SI | EWC | MAS | mean/mode-IMM | LWF | EBLL | PackNet |  HAT | GEM | iCaRL 
+</b></p>
+</div>
+
+These are compared with 4 baselines:
+<div align="center">
+<p align="center"><b>
+  Joint | Finetuning | Finetuning-FM | Finetuning-PM
+</b></p>
+</div>
+
+- **Joint**: Learn from all task data at once with a single head (multi-task learning baseline).
+- **Finetuning**: standard SGD
+- **Finetuning with Full Memory replay**: Allocate memory dynamically to incoming tasks.
+- **Finetuning with Partial Memory replay**: Divide memory a priori over all tasks.
 
 
 This source code is released under a Attribution-NonCommercial 4.0 International
@@ -26,7 +33,7 @@ license, find out more about it in the [LICENSE file](LICENSE).
 
 
 ## Pipeline
-**Reproducability**: Results from the paper can be obtained from [src/main_'dataset'.sh](src/main_tinyimagenet.sh). 
+**Reproducibility**: Results from the paper can be obtained from [src/main_'dataset'.sh](src/main_tinyimagenet.sh). 
 Full pipeline example in [src/main_tinyimagenet.sh](src/main_tinyimagenet.sh) .
 
 **Pipeline**: Constructing a custom pipeline typically requires the following steps.
@@ -79,6 +86,14 @@ The class "YourMethod" will call this code for training/eval/processing of a sin
 
 ## Credits
 - Consider citing our work upon using this repo.
+  ```
+  @ARTICLE{delange2021clsurvey,
+    author={M. {Delange} and R. {Aljundi} and M. {Masana} and S. {Parisot} and X. {Jia} and A. {Leonardis} and G. {Slabaugh} and T. {Tuytelaars}},
+    journal={IEEE Transactions on Pattern Analysis and Machine Intelligence}, 
+    title={A continual learning survey: Defying forgetting in classification tasks}, 
+    year={2021},volume={},number={},pages={1-1},
+    doi={10.1109/TPAMI.2021.3057446}}
+  ```
 - Thanks to Huawei for funding this project.
 - Thanks to the following repositories:
     - https://github.com/rahafaljundi/MAS-Memory-Aware-Synapses
