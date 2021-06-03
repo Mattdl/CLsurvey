@@ -95,6 +95,7 @@ The class "YourMethod" will call this code for training/eval/processing of a sin
     doi={10.1109/TPAMI.2021.3057446}}
   ```
 - Thanks to Huawei for funding this project.
+- Checkout the CL [Avalanche project](https://github.com/ContinualAI/avalanche) for benchmark setups of TinyImagenet and iNaturalist2018.
 - Thanks to the following repositories:
     - https://github.com/rahafaljundi/MAS-Memory-Aware-Synapses
     - https://github.com/facebookresearch/GradientEpisodicMemory
